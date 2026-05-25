@@ -1,12 +1,12 @@
 export const generators = [
-  { name: 'Colasolar Plus', price: '850,000', img: '/Solar gen1.jpeg', power: 'Powers: 2 Fridges, Fans, TV, Lights', details: ['Capacity: 5KVA', 'Battery: 200Ah Lithium', 'Warranty: 2 Years'] },
-  { name: 'Colasolar Unit B', price: '720,000', img: '/Solar_gen2.jpeg', power: 'Powers: 1 Fridge, Fans, TV, Lights', details: ['Capacity: 3.5KVA', 'Battery: 150Ah Lithium', 'Warranty: 1 Year'] },
-  { name: 'Colasolar Pro', price: '950,000', img: '/Solar_gen3.jpeg', power: 'Powers: 3 Fridges, AC, Fans, TV', details: ['Capacity: 7KVA', 'Battery: 300Ah Lithium', 'Warranty: 2 Years'] },
-  { name: 'Colasolar Compact', price: '600,000', img: '/Solar_gen4.jpeg', power: 'Powers: Fans, TV, Laptop, Lights', details: ['Capacity: 2KVA', 'Battery: 100Ah Lithium', 'Warranty: 1 Year'] },
-  { name: 'Colasolar Max', price: '1,200,000', img: '/Solar_gen5.jpeg', power: 'Powers: Industrial Office Setup', details: ['Capacity: 10KVA', 'Battery: 500Ah Lithium', 'Warranty: 3 Years'] },
-  { name: 'Colasolar Max', price: '1,200,000', img: '/Solar_gen5.jpeg', power: 'Powers: Industrial Office Setup', details: ['Capacity: 10KVA', 'Battery: 500Ah Lithium', 'Warranty: 3 Years'] },
-  { name: 'Colasolar Max', price: '1,200,000', img: '/Solar_gen5.jpeg', power: 'Powers: Industrial Office Setup', details: ['Capacity: 10KVA', 'Battery: 500Ah Lithium', 'Warranty: 3 Years'] },
-  { name: 'Colasolar Compact', price: '600,000', img: '/Solar_gen4.jpeg', power: 'Powers: Fans, TV, Laptop, Lights', details: ['Capacity: 2KVA', 'Battery: 100Ah Lithium', 'Warranty: 1 Year'] },
+  { name: 'Colasolar Plus', price: '1,150,000', img: '/Solar gen1.jpeg', power: 'Powers: 1hp inverter AC, Deep Freezer, 0.5-1hp pumping machine, Electric Blender, Television, Fan, Lighting points, Suckets for charging gadgets and more...', details: ['Capacity: inverter: 2.2Kva', 'Battery: 3.6 Kwh', 'Warranty: 2 Years'] },
+  { name: 'Haisic', price: '1,850,000', img: '/Solar_gen2.jpeg', power: 'Powers: Pumping machine, Air conditioner, Deep Fridge, Microwave oven, Television, Electric Blender, Lighting points, Suckets for charging gadgets and more...', details: ['Capacity: 4.2KVA', 'Battery: 8 Kwh', 'Warranty: 2 Years'] },
+  { name: 'Cola 3600', price: '950,000', img: '/Solar_gen3.jpeg', power: 'Powers: 1hp inverter AC, Deep freezer, 0.5-1hp pumping machine, Electric Blender, Television, Fan, Lighting points, Suckets for Charging gadgets and more...', details: ['Capacity: 1.2KVA', 'Battery: 3.6 Kwh', 'Warranty: 2 Years'] },
+  { name: 'Heroee2', price: '750,000', img: '/Solar_gen4.jpeg', power: 'Powers: Fridge, Television, Fan, Home theater, Lighting points, Blender, Suckets for charging gadgets and more', details: ['Capacity: 1KVA', 'Battery: 2kwh Lithium', 'Warranty: 2 Years'] },
+  { name: 'Heroee1', price: '350,000', img: '/Solar_gen5.jpeg', power: 'Powers: Television, Fan, Home theater, Lighting points, Suckets for charging gadgets', details: ['Capacity: 200 watts output', 'Battery: 1kwh Lithium', 'Warranty: 2 Years'] },
+  { name: '300 Watts Solar generator', price: '450,000', img: '/300watts_inverter.jpeg', power: 'Powers: Television, Clipper, Electric Blender, Lighting points, Home theater, Fan, Suckets for charging gadgets and more...', details: ['Capacity: 300 watts Output', 'Battery: 2kwh Lithium', 'Warranty: 2 Years'] },
+  { name: 'Colasolar', price: '30 Million', img: '/30mill_gang.jpeg', power: 'Powers: 5 Air-conditioning, Pumping machine, 6 and above deep freezer, Television, Pressing iron, Microwave oven, suckets for charging and lots more...', details: ['Capacity: 30kva inverter', 'Battery:  90kwh lithium', 'Warranty: 2 Years'] },
+  
 ];
 
 export const panels = [

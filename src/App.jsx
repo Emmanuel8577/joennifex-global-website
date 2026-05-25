@@ -73,13 +73,13 @@ export default function App() {
           <div>
             <h4 className="text-white font-bold mb-4">Contact Us</h4>
             <p className="text-sm mb-2">📞 +234 703 375 0333</p>
-            <p className="text-sm mb-2">📞 08106186668</p>
-            <p className="text-sm mb-2">📞 09069110990</p>
+            <p className="text-sm mb-2">📞 +234 906 911 0990</p>
+            <p className="text-sm mb-2">📞 +234 810 618 6668</p>
             <p className="text-sm mb-4">✉️ joennifexglobal@gmail.com</p>
             
             {/* WhatsApp Button inside the Footer */}
             <a 
-              href="https://wa.me/2347033750333?text=Hello%20Joennifex%20Global,%20I%20have%20an%20inquiry." 
+              href="https://wa.me/2349069110990?text=Hello%20Joennifex%20Global,%20I%20have%20an%20inquiry." 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => window.fbq('track', 'Contact', { method: 'WhatsApp_Footer' })}
