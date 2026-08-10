@@ -2,7 +2,7 @@ import { Zap, MessageCircle, ChevronRight } from 'lucide-react';
 import * as pixel from '../utils/pixel';
 
 export default function Hero() {
-  const waLink = "https://wa.me/2347033750333?text=Hi,%20I%20am%20interested%20in%20a%20solar%20installation.";
+  const waLink = "https://wa.me/2347033750333?text=Hi,%20I%20am%20interested%20in%20a%20solar%20generator/panel.";
 
   return (
     <section className="bg-gradient-to-b from-yellow-50 to-white py-20 px-6 overflow-hidden">
