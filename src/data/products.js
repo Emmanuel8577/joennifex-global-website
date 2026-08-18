@@ -61,12 +61,12 @@ export const generators = [
   },
   {
     name: "Colasolar Cola1000",
-    price: "345,000",
+    price: "42,600,000",
     img: "/30mill_gang.jpeg",
     power:
-      "Powers: Home Theater, Deep freezer, Television, Pressing iron, Fan, Lighting Points, Suckets for charging and lots more...",
+      "Powers: Up to 15 AC or more, Chiller, Deep freezer, Pumping machines, Microwave oven, Water heater, Hot Plate (electric cooker), Television, Pressing iron, Fan, Lighting Points, Suckets for charging and lots more...",
     details: [
-      "Capacity: 1kwh-300W output Inverter solar generator",
+      "Capacity: 36kva Inverter",
       "Battery:  90kwh lithium",
       "Warranty: 2 Years",
     ],
