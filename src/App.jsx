@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,23 +7,73 @@ import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import OrderForm from './components/OrderForm';
 import { FB_PIXEL_ID } from './utils/pixel';
+import { ShieldCheck, Mail, ArrowLeft } from "lucide-react";
 
-export default function App() {
+// 1. Standalone Privacy Policy Page Component
+function PrivacyPolicy() {
   useEffect(() => {
-    // Meta Pixel Initialization
-    !function(f,b,e,v,n,t,s) {
-      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    
-    window.fbq('init', FB_PIXEL_ID);
-    window.fbq('track', 'PageView');
+    window.scrollTo(0, 0);
   }, []);
 
+  return (
+    <div className="min-h-screen bg-slate-50 py-16 px-6 font-sans text-slate-800">
+      <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200/80">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-amber-600 hover:text-amber-700 mb-8 transition-colors"
+        >
+          <ArrowLeft size={16} /> Back to Home
+        </Link>
+
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-3 bg-amber-100 text-amber-700 rounded-xl">
+            <ShieldCheck size={28} />
+          </div>
+          <h1 className="text-3xl font-extrabold text-slate-900">
+            Privacy Policy
+          </h1>
+        </div>
+
+        <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-8">
+          Joennifex Global Tech Ltd
+        </p>
+
+        <div className="space-y-6 text-slate-600 leading-relaxed text-base border-t border-slate-100 pt-6">
+          <p>
+            Joennifex Global Tech Ltd collects the information you submit
+            (name, phone number, and responses) solely to process your inquiry
+            or order for MECO Solar products.
+          </p>
+
+          <p>
+            We do not sell or share your information with third parties. Your
+            details are used only to contact you via WhatsApp, phone, or email
+            regarding your order.
+          </p>
+
+          <p>
+            You may request that we delete your information at any time by
+            contacting{" "}
+            <a
+              href="mailto:joennifexglobal@gmail.com"
+              className="text-amber-600 font-medium underline hover:text-amber-700 inline-flex items-center gap-1"
+            >
+              <Mail size={16} /> joennifexglobal@gmail.com
+            </a>
+            .
+          </p>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-slate-100 text-xs text-slate-400 text-center">
+          © 2026 Joennifex Global Tech Ltd. All rights reserved.
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 2. Landing Page View Component
+function LandingPage() {
   return (
     <main className="relative min-h-screen font-sans text-gray-900 bg-gray-50">
       <Header />
@@ -37,7 +88,7 @@ export default function App() {
         href="https://wa.me/2347033750333?text=Hello%20Joennifex%20Global,%20I%20am%20interested%20in%20your%20solar%20solutions." 
         target="_blank" 
         rel="noopener noreferrer"
-        onClick={() => window.fbq('track', 'Contact', { method: 'WhatsApp_Floating_Button' })}
+        onClick={() => window.fbq && window.fbq('track', 'Contact', { method: 'WhatsApp_Floating_Button' })}
         className="fixed bottom-6 right-6 z-[9999] bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all hover:scale-110 flex items-center justify-center"
         aria-label="Chat with us on WhatsApp"
       >
@@ -46,7 +97,7 @@ export default function App() {
         </svg>
       </a>
 
- {/* Footer with integrated WhatsApp Button */}
+      {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
           
@@ -77,12 +128,11 @@ export default function App() {
             <p className="text-sm mb-2">📞 +234 810 618 6668</p>
             <p className="text-sm mb-4">✉️ joennifexglobal@gmail.com</p>
             
-            {/* WhatsApp Button inside the Footer */}
             <a 
               href="https://wa.me/2349069110990?text=Hello%20Joennifex%20Global,%20I%20have%20an%20inquiry." 
               target="_blank" 
               rel="noopener noreferrer"
-              onClick={() => window.fbq('track', 'Contact', { method: 'WhatsApp_Footer' })}
+              onClick={() => window.fbq && window.fbq('track', 'Contact', { method: 'WhatsApp_Footer' })}
               className="inline-block bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition"
             >
               Chat on WhatsApp
@@ -90,10 +140,46 @@ export default function App() {
           </div>
         </div>
         
-        <div className="text-center mt-12 pt-8 border-t border-gray-800 text-sm">
-          © 2026 Joennifex Global Tech Ltd. All rights reserved.
+        <div className="text-center mt-12 pt-8 border-t border-gray-800 text-sm flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-400">
+          <span>© 2026 Joennifex Global Tech Ltd. All rights reserved.</span>
+          <span className="hidden sm:inline">•</span>
+          <Link
+            to="/privacy-policy"
+            className="text-gray-400 hover:text-yellow-500 underline transition-colors"
+          >
+            Privacy Policy
+          </Link>
         </div>
       </footer>
     </main>
+  );
+}
+
+// 3. Main Application Component with Top-Level Router
+export default function App() {
+  useEffect(() => {
+    // Meta Pixel Initialization
+    !function(f,b,e,v,n,t,s) {
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    
+    if (FB_PIXEL_ID) {
+      window.fbq('init', FB_PIXEL_ID);
+      window.fbq('track', 'PageView');
+    }
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
